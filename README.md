@@ -23,7 +23,7 @@ Detected sings are:
 To use either select open main.py, then follow the instructions in the console
 or choose:
 - camera.py to detect signs from <b>default</b> webcam.
-- wideo.py to detect signs from video file. In console write a path to the wideo you want detect sings from (preferably in .mp4)
+- wideo.py to detect signs from video file. In console write a path to the wideo you want detect sings from (preferably in .mp4).
 
 
 

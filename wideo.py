@@ -2,54 +2,52 @@ from ultralytics import YOLO
 import cv2
 import math
 
-
 model = YOLO("znaki.pt")
 
+video_path = input("Enter the path or filename (if in the same folder) of the mp4 file: ")
+camera = cv2.VideoCapture(video_path)
 
-video_sciezka = input("Podaj scieżke lub nazwę pliku (jeżeli jest w tym samym folderze) mp4: ")
-kamerka = cv2.VideoCapture(video_sciezka)
+znaki = ['agatka', 'autostrada', 'ograniczenie_predkosci', 'parking', 'pierszenstwo', 'prosto', 'przejscie_pieszych', 'stop', 'ustap']
 
-znaki = ['agatka','autostrada','ograniczenie_predkosci','parking','pierszenstwo','prosto','przejscie_pieszych','stop','ustap'] 
-
-#każda klatka
+# Each frame
 while True:
-    ret, klatka = kamerka.read()
+    ret, frame = camera.read()
 
     if ret:
-        wyniki = model.track(klatka, persist=True)
+        results = model.track(frame, persist=True)
 
-        # przetwarzanie wykrytych obiektów
-        for r in wyniki:
-            ramki = r.boxes
+        # Processing detected objects
+        for r in results:
+            boxes = r.boxes
 
-            for ramka in ramki:
-                # współrzedne ramek
-                x1, y1, x2, y2 = ramka.xyxy[0]
+            for box in boxes:
+                # Coordinates of the boxes
+                x1, y1, x2, y2 = box.xyxy[0]
                 x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
 
-                # rysowanie ramke otaczająca
-                cv2.rectangle(klatka, (x1, y1), (x2, y2), (255, 255, 0), 3)
+                # Drawing the bounding box
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 255, 0), 3)
 
-                # pewność detekcji
-                confidence = math.ceil((ramka.conf[0] * 100)) / 100
+                # Detection confidence
+                confidence = math.ceil((box.conf[0] * 100)) / 100
 
-                # nazwa klasy wykrytego obiektu, tj. nazwa wykrytego znaku
-                znak = int(ramka.cls[0])
-                nazwa_znaku = znaki[znak]
+                # Class name of the detected object, i.e., the name of the detected sign
+                sign = int(box.cls[0])
+                sign_name = znaki[sign]
 
-                # wyświetlanie wykrytego znaku i pewność identyfikacji
+                # Displaying the detected sign and confidence level
                 org = (x1, y1)
                 font = cv2.FONT_HERSHEY_SIMPLEX
                 fontScale = 1
                 color = (255, 0, 0)
                 thickness = 2
-                detection = f"{nazwa_znaku} {confidence}"
-                cv2.putText(klatka, detection, org, font, fontScale, color, thickness)
+                detection = f"{sign_name} {confidence}"
+                cv2.putText(frame, detection, org, font, fontScale, color, thickness)
 
-        # klatka z wykrytym znakiem
-        cv2.imshow('Wideo', klatka)
+        # Frame with detected signs
+        cv2.imshow('Video', frame)
         if cv2.waitKey(25) & 0xFF == ord('q'):
             break
 
-kamerka.release()
+camera.release()
 cv2.destroyAllWindows()

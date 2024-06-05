@@ -1,38 +1,36 @@
 import subprocess
 
-
-pliki_python = {
+python_files = {
     1: "camera.py",
     2: "video.py",
 }
-moduly_opis = {
-    1: "detekcja pinowych znaków drogowych z użyciem domyślnej kamery",
-    2: "detekcja inowych znaków drogowych z wybranego nagrania wideo",
+module_descriptions = {
+    1: "detection of road signs using the default camera",
+    2: "detection of road signs from a selected video recording",
 }
-def uruchom_skrypt(wybrana_opcja):
-    plik_python = pliki_python.get(wybrana_opcja)
 
-    if plik_python:
-        subprocess.run(["python", plik_python])
+def run_script(selected_option):
+    python_file = python_files.get(selected_option)
+
+    if python_file:
+        subprocess.run(["python", python_file])
     else:
-        print("Nieprawidowa opcja")
+        print("Invalid option")
 
 if __name__ == "__main__":
     while True:
+        print("Program modules:")
+        for i, file in python_files.items():
+            print(f"{i}: {file} - {module_descriptions[i]}")
+        print("q: Quit")
+        print()
+        input_data = input("Enter the number corresponding to the part of the program (q to exit): ")
 
-        print("Moduły programu:")
-        for i, plik in pliki_python.items():
-            print(f"{i}: {plik} - {moduly_opis[i]}")
-        print("q: Wyjdź")
-        print()
-        print()
-        dane_wej = input("Wprowadź liczbę odpowiadającą części programu (q by zakończyć program): ")
-        
-        if dane_wej.lower() == 'q':
+        if input_data.lower() == 'q':
             break
-        
+
         try:
-            plik_cyfra = int(dane_wej)
-            uruchom_skrypt(plik_cyfra)
+            file_number = int(input_data)
+            run_script(file_number)
         except ValueError:
-            print("Nieprawidłowa opcja. Wprowadź poprawną liczbę lub 'q' by zakończyć program.")
+            print("Invalid option. Enter a valid number or 'q' to exit the program.")

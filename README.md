@@ -19,7 +19,8 @@ Detected sings are:
 -  stop B-20
 -  give way A-7
 
-To use either select open main.py,
+<h2>How to use</h2>
+To use either select open main.py, then follow the instructions in the console
 or choose:
 - camera.py to detect signs from <b>default</b> webcam.
 - wideo.py to detect signs from video file. In console write a path to the wideo you want detect sings from (preferably in .mp4)

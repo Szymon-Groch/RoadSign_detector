@@ -3,7 +3,7 @@
 This application uses [Yolov8](https://github.com/ultralytics/ultralytics) AI model pretrained to allows for detectection of <b>selected polish road signs</b> via webcam or from video file. 
 
 used modules are:
-- ultralytics YOLO
+- ultralytics 
 - OpenCv2
 - math
 

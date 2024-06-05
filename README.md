@@ -4,7 +4,8 @@ This applicationserves as my [engineering thesis project](https://drive.google.c
 
 It utilizes [Yolov8](https://github.com/ultralytics/ultralytics) AI model pretrained for detection of <b>selected polish road signs</b> via webcam or from selected video file. 
 
-![image](https://github.com/Szymon-Groch/RoadSign_detector/assets/171821030/ff391d73-75b2-4173-89d0-62d67708516f)
+![image](https://github.com/Szymon-Groch/RoadSign_detector/assets/171821030/901d447f-ee45-41bf-b063-c531e9ccb13b)
+
 
 
 used modules are:

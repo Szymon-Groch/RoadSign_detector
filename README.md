@@ -25,4 +25,5 @@ or choose:
 - camera.py to detect signs from <b>default</b> webcam.
 - wideo.py to detect signs from video file. In console write a path to the wideo you want detect sings from (preferably in .mp4)
 
+
 click <b>Q</b> to end detection.

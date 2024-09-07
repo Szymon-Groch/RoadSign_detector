@@ -1,6 +1,6 @@
 <h1>Application for recognizing vertical road signs</h1>
 
-This application serves as my [engineering thesis project](https://drive.google.com/file/d/12cyChpgL3MY6eKqPUHhkvFxemR-PhZbd/view?usp=drive_link)
+This application serves as my engineering thesis.
 
 It utilizes [Yolov8](https://github.com/ultralytics/ultralytics) AI model pretrained for detection of <b>selected polish road signs</b> via webcam or from selected video file. 
 

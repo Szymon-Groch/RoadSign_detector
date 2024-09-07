@@ -6,12 +6,11 @@ It utilizes [Yolov8](https://github.com/ultralytics/ultralytics) AI model pretra
 
 ![image](https://github.com/Szymon-Groch/RoadSign_detector/assets/171821030/901d447f-ee45-41bf-b063-c531e9ccb13b)
 
-
-
+Program was written in python language
 used modules are:
-- ultralytics 
-- OpenCV
-- math
+- <b>ultralytics:</b> - used for YOLOv8 model inference
+- <b>OpenCV:</b> - Drawing Bounding Boxes and postprocessing for roadsign detection
+- <b>math:</b> for roadsign detection confidence calculation
 
 
 Detected sings are:
@@ -31,8 +30,9 @@ or choose:
 - camera.py to detect signs from <b>default</b> webcam.
 - wideo.py to detect signs from video file. In console write a path to the wideo you want detect sings from (preferably in .mp4).
 
-
-
-
-
 click <b>Q</b> to end detection.
+
+
+<b>Make sure pretrained YOLOv8 AI model named "znaki.pt" is in the same directory as .py scripts </b>
+Alternatively modify the argument in the 'model' variable to match the file's current directory.
+

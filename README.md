@@ -7,22 +7,26 @@ It utilizes [Yolov8](https://github.com/ultralytics/ultralytics) AI model pretra
 ![image](https://github.com/Szymon-Groch/RoadSign_detector/assets/171821030/901d447f-ee45-41bf-b063-c531e9ccb13b)
 
 Program was written in python language
-used modules are:
-- <b>ultralytics:</b> - used for YOLOv8 model inference
-- <b>OpenCV:</b> - video vapture, drawing bounding boxes and postprocessing for roadsign detection
-- <b>math:</b> for roadsign detection confidence calculation
 
+<h2>used modules are:<h2>
+<ul>
+<li> <b>ultralytics:</b> - used for YOLOv8 model inference
+<li> <b>OpenCV:</b> - video vapture, drawing bounding boxes and postprocessing for roadsign detection
+<li> <b>math:</b> for roadsign detection confidence calculation
+</ul>
 
 Detected sings are:
-- "Agatka" T-27
-- highway D-9
-- speed limit  B-33
-- parking D-18
-- priority road D-1
--  go straight C-5
--  pedestrian crossing D-6
--  stop B-20
--  give way A-7
+<ul>
+<li> "Agatka" T-27
+<li> highway D-9
+<li> speed limit  B-33
+<li> parking D-18
+<li> priority road D-1
+<li>  go straight C-5
+<li>  pedestrian crossing D-6
+<li>  stop B-20
+<li>  give way A-7
+</ul>
 
 <h2>How to use</h2>
 To use either select open main.py, then follow the instructions in the console

@@ -15,7 +15,7 @@ Program was written in python language
 <li> <b>math:</b> for roadsign detection confidence calculation
 </ul>
 
-<h3>Detected sings are:</h3>h3>
+<h3>Detected sings are:</h3>
 <ul>
 <li> "Agatka" T-27
 <li> highway D-9

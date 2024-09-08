@@ -8,14 +8,14 @@ It utilizes [Yolov8](https://github.com/ultralytics/ultralytics) AI model pretra
 
 Program was written in python language
 
-<h2>used modules are:<h2>
+<h3>Used modules are:</h3>
 <ul>
 <li> <b>ultralytics:</b> - used for YOLOv8 model inference
 <li> <b>OpenCV:</b> - video vapture, drawing bounding boxes and postprocessing for roadsign detection
 <li> <b>math:</b> for roadsign detection confidence calculation
 </ul>
 
-Detected sings are:
+<h3>Detected sings are:</h3>h3>
 <ul>
 <li> "Agatka" T-27
 <li> highway D-9

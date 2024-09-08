@@ -38,7 +38,7 @@ click <b>Q</b> to end detection.
 
 <h3>Important notes</h3>
 <ul>
-<li> <b> For webcam detection make sure you have one connected
+<li> <b> For webcam detection make sure you have one connected </b>
 <li> <b>Make sure pretrained YOLOv8 AI model named "znaki.pt" is in the same directory as .py scripts </b>. Alternatively modify the argument in the 'model' variable to match the file's current directory.
 <li> For example video extract .zip file in "wideo" folder
 </ul>

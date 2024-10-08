@@ -11,7 +11,7 @@ Program was written in python language
 <h3>Used modules are:</h3>
 <ul>
 <li> <b>ultralytics:</b> - used for YOLOv8 model inference
-<li> <b>OpenCV:</b> - video vapture, drawing bounding boxes and postprocessing for roadsign detection
+<li> <b>OpenCV:</b> - video capture, drawing bounding boxes and postprocessing for roadsign detection
 <li> <b>math:</b> for roadsign detection confidence calculation
 </ul>
 

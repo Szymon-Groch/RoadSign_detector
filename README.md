@@ -31,9 +31,10 @@ Program was written in python language
 <h2>How to use</h2>
 Run "main.py" via terminal, then follow the instructions in the console
 or run:
-- camera.py to detect signs from <b>default</b> webcam.
-- wideo.py to detect signs from video file. In console write a path to the wideo you want detect sings from (preferably in .mp4).
-
+<ul>
+<li> camera.py to detect signs from <b>default</b> webcam.
+<li> wideo.py to detect signs from video file. In console write a path to the wideo you want detect sings from (preferably in .mp4).
+</ul>
 click <b>Q</b> to end detection.
 
 <h3>Important notes</h3>

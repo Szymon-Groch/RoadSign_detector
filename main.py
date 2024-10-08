@@ -2,7 +2,7 @@ import subprocess
 
 python_files = {
     1: "camera.py",
-    2: "video.py",
+    2: "wideo.py",
 }
 module_descriptions = {
     1: "detection of road signs using the default camera",
